@@ -5,7 +5,7 @@ Endpoints:
     -StartEvent/location_id **GET**
     -CheckIn/location_id **GET**
     -CheckOut/location_id **GET**
-    -Posts/location_id **GET/POST**
+    -Posts/location_id **GET/POST** POST PARAMS = {"username": "name_here", "message": "testing123"}
 ```
 
 This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
