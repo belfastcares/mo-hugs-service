@@ -43,7 +43,7 @@ class Location(models.Model):
 class Posts(models.Model):
     location = models.ForeignKey(Location)
     username = models.CharField('username', max_length=50)
-    date_posted = models.DateTimeField(auto_created=True)
+    date_posted = models.DateTimeField(auto_now=True)
     message = models.TextField('message')
 
     def __str__(self):

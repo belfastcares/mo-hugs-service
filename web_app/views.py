@@ -3,7 +3,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from web_app.serializers import LocationSerializer, PostsSerializer
+from web_app.serializers import LocationSerializer, PostsSerializer, PostSerializerCreate
 from .models import Location, Posts
 
 
@@ -103,7 +103,7 @@ def posts(request, location_id):
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = PostsSerializer(data=request.data)
+        serializer = PostSerializerCreate(data=request.data, context={'location_id': location_id})
         if serializer.is_valid():
             serializer.save()
             return Response(status=status.HTTP_201_CREATED)
