@@ -1,3 +1,5 @@
 from django.contrib import admin
+from web_app.models import Location, Posts
 
-# Register your models here.
+admin.site.register(Location)
+admin.site.register(Posts)
