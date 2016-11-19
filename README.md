@@ -1,11 +1,12 @@
 # Mohack 2016 API
-
+```sh 
 Endpoints:
     -GetLocations **GET**
     -StartEvent/location_id **GET**
     -CheckIn/location_id **GET**
     -CheckOut/location_id **GET**
     -Posts/location_id **GET/POST**
+```
 
 This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
 
